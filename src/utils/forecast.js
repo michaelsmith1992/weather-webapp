@@ -8,9 +8,7 @@ const forecast = (latt, long, callback) => {
         } else if (body.error) {
             callback("Cannot find forecast for location", undefined);
         } else {
-            let currently = body.currently;
-            console.log(currently)
-
+            let currently = body.currently
             callback(undefined, `${body.daily.data[0].summary} It is currently ${currently.temperature} degrees out. There is a ${currently.precipProbability}% chance of rain. The current wind speed is ${currently.windSpeed} mph.`)
         }
     });
