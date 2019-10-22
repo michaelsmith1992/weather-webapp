@@ -18,7 +18,7 @@ app.set("views", viewsPath);
 hbs.registerPartials(partialsPath);
 
 // setup static directory to serve
-app.use(express.static(publicDirPath));
+app.use(express.static(publicDirPath))
 
 // Router
 
